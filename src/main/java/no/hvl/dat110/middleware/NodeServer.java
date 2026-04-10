@@ -36,8 +36,9 @@ public class NodeServer {
 	}
 	
 	public void start() {
-		
-		try {		
+
+		try {
+			System.setProperty("java.rmi.server.hostname", "localhost");
 			// create registry and start it on port 9091
 			Registry registry = LocateRegistry.createRegistry(port);
 			
